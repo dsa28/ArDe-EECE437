@@ -1,20 +1,15 @@
 
 public class TAOr extends TAOperator {
 
-	TAOr(TAObject a, TAObject b) throws TAException
+	TAOr(TABool a, TABool b) 
 	{
-		if (a.type() != "bool" || b.type() != "bool")
-		{
-		System.err.println("Both arguments should be of type TABool");
-		throw new TAException();
-		}
+		
 			
 		op1 = a;
 		op2 = b;
 		
-		
 		value = new TABool();
 	}
 	
-	TAObject op1, op2;
+	TABool op1, op2;
 }
