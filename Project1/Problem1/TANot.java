@@ -1,5 +1,5 @@
 
-public class TANot extends TAOperator {
+public class TANot extends TABool {
 	
 	TANot (TABool a)
 	{
@@ -10,5 +10,6 @@ public class TANot extends TAOperator {
 	}
 	
 	TABool op;
+	TABool value;
 	
 }

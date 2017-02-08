@@ -1,5 +1,5 @@
 
-public class TAAnd extends TAOperator {
+public class TAAnd extends TABool {
 
 	/*
 	 * The AND operator is a binary operator 
@@ -17,6 +17,7 @@ public class TAAnd extends TAOperator {
 		value = new TABool();
 	}
 	
-	TAObject op1,op2;
+	TABool op1,op2;
+	TABool value;
 
 }

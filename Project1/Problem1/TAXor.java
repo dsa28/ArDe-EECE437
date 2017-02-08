@@ -1,5 +1,5 @@
 
-public class TAXor extends TAOperator {
+public class TAXor extends TABool {
 	
 	
 	TAXor(TABool a, TABool b) 
@@ -12,4 +12,5 @@ public class TAXor extends TAOperator {
 	}
 	
 	TABool op1, op2;
+	TABool value;
 }

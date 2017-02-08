@@ -1,5 +1,5 @@
 
-public class TAImplies extends TAOperator{
+public class TAImplies extends TABool{
 	
 	TAImplies(TABool a, TABool b) 
 	{
@@ -11,4 +11,5 @@ public class TAImplies extends TAOperator{
 	}
 	
 	TABool op1, op2;
+	TABool value;
 }

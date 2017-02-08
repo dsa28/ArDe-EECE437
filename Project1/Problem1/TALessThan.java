@@ -1,5 +1,5 @@
 
-public class TALessThan extends TAOperator {
+public class TALessThan extends TABool {
 
 	TALessThan(TAObject a, TAObject b) throws TAException
 	{
@@ -24,5 +24,6 @@ public class TALessThan extends TAOperator {
 	
 	
 	TAObject op1,op2;
+	TABool value;
 
 }

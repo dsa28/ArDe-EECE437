@@ -8,7 +8,7 @@ public class main {
 		TACeiling y = new TACeiling(d);
 		TABool b = new TABool();
 		TALessThan t1 = new TALessThan(x,y);
-		//TAAnd t2 = new TAAnd(b,t1);
+		TAAnd t2 = new TAAnd(b,t1);
 		
 		//t1 = new TALessThan(x,d);
 	}
