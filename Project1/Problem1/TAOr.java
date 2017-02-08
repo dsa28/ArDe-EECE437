@@ -1,5 +1,5 @@
 
-public class TAOr extends TABool {
+public class TAOr extends TABoolFunction {
 
 	TAOr(TABool a, TABool b) 
 	{
@@ -9,6 +9,14 @@ public class TAOr extends TABool {
 		op2 = b;
 		
 		value = new TABool();
+		opvalue = "||";
+	}
+	
+	void listVal()
+	{
+		op1.list();
+		System.out.print(" ");
+		op2.list();
 	}
 	
 	TABool op1, op2;

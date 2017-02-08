@@ -1,28 +1,43 @@
 
 public class TABool extends TAObject {
 
-	
-	TAObject copyType()
+	void list()
 	{
-		return new TABool();
+		if (name!=null)
+			System.out.print(name);
+		else
+			System.out.print(value);
+			
 	}
 	
+	void set(boolean bool)
+	{value=bool;}
 	
 	String type() {
 		return "bool";
 	}
+	
+	TABool newInstance()
+	{return new TABool();}
 	
 	TABool(boolean a)
 	{
 		value = a;
 	}
 	
-	TABool ()
+	TABool (String s)
+	{
+		value = false;
+		name = s;
+	}
+	
+	 TABool()
 	{
 		value = false;
 	}
 	
 	
 	 boolean value;
+	 
 
 }

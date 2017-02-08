@@ -4,7 +4,7 @@ public abstract class TAObject {
 
 	
 	abstract String type();
-	//abstract TAObject copyType();
+	abstract void list();
 	
 	
 	String name;

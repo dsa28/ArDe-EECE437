@@ -1,5 +1,5 @@
 
-public class TALessThan extends TABool {
+public class TALessThan extends TABoolFunction {
 
 	TALessThan(TAObject a, TAObject b) throws TAException
 	{
@@ -19,9 +19,16 @@ public class TALessThan extends TABool {
 		op2 = b;
 		
 		
-		value = new TABool();
+		value = new TABool("newvalue");
+		opvalue = "<";
 	}
 	
+	void listVal()
+	{
+		op1.list();
+		System.out.print(" ");
+		op2.list();
+	}
 	
 	TAObject op1,op2;
 	TABool value;

@@ -1,4 +1,4 @@
-public class TAGreaterThan extends TABool {
+public class TAGreaterThan extends TABoolFunction {
 
 	TAGreaterThan(TAObject a, TAObject b) throws TAException
 	{
@@ -19,8 +19,16 @@ public class TAGreaterThan extends TABool {
 		
 		
 		value = new TABool();
+		opvalue = ">";
 	}
 	
+	
+	void listVal()
+	{
+		op1.list();
+		System.out.print(" ");
+		op2.list();
+	}
 	
 	TAObject op1,op2;
 	TABool value;

@@ -1,5 +1,5 @@
 
-public class TAXor extends TABool {
+public class TAXor extends TABoolFunction {
 	
 	
 	TAXor(TABool a, TABool b) 
@@ -9,7 +9,17 @@ public class TAXor extends TABool {
 			op2 = b;
 			
 			value = new TABool();
+			opvalue = "xor";
 	}
+	
+	
+	void listVal()
+	{
+		op1.list();
+		System.out.print(" ");
+		op2.list();
+	}
+	
 	
 	TABool op1, op2;
 	TABool value;

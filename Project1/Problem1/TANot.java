@@ -1,13 +1,16 @@
 
-public class TANot extends TABool {
+public class TANot extends TABoolFunction {
 	
-	TANot (TABool a)
+	TANot(TABool a)
 	{
 		
 		op = a;
-		value = new TABool();
-		
+		value = op.newInstance();
+		opvalue = "not";
 	}
+	
+	void listVal()
+	{value.list();}
 	
 	TABool op;
 	TABool value;
