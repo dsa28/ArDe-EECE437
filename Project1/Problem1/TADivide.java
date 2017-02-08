@@ -1,7 +1,7 @@
 
-public class TADivide extends TAOperator {
+public class TADivide extends TANumeric {
 	
-	TADivide(TAObject a, TAObject b) throws TAException
+	TADivide(TANumeric a, TANumeric b) throws TAException
 	{
 		
 		if (a.type() != b.type())
@@ -10,17 +10,19 @@ public class TADivide extends TAOperator {
 		throw new TAException();
 		}
 	
-	if (a.type() == "bool")
-	{
-		System.err.println("Arguments should not be of type TABool");
-		throw new TAException();
-	}
-		
+	
 			op1 = a;
 			op2 = b;
-			value = op1.copyType();
-		
+			//value = op1;
 				
 	}
-	TAObject op1,op2;
+	
+	
+	String type() {
+		
+		return value.type();
+	}
+	
+	TANumeric op1,op2;
+	TANumeric value;
 }

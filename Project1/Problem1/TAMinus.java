@@ -1,24 +1,17 @@
 
-public class TAMinus extends TAOperator {
+public class TAMinus extends TANumeric {
 
-	TAMinus(TAObject a) throws TAException
+	TAMinus(TANumeric a) 
 	{
-		if (a.type() == "bool")
-			{
-			System.err.println("Argument should not be of type TABool");
-			throw new TAException();
-			}
 		
-		else 
-		{
 			//op1 = 0 and is of the type of op2
-			op1 = op2.copyType();
+			//op1 = op2.copyType();
 			op2 = a;
-			value = op2.copyType();
-		}
+			//value = op2.copyType();
+		
 	}
 	
-	TAMinus (TAObject a, TAObject b) throws TAException
+	TAMinus (TANumeric a, TANumeric b) throws TAException
 	{
 		if (a.type() != b.type())
 	{
@@ -27,18 +20,19 @@ public class TAMinus extends TAOperator {
 	}
 
 
-		if (a.type() == "bool"){
-	System.err.println("Arguments should not be of type TABool");
-	throw new TAException();
-	}
 	
 		op1 = a;
 		op2 = b;
-		value = op1.copyType();
+		//value = op1.copyType();
 		
 				
 	}
 	
-	TAObject op1,op2;
+	String type()
+	{
+		return value.type();
+	}
 	
+	TANumeric op1,op2;
+	TANumeric value;
 }

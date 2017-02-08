@@ -1,5 +1,5 @@
 
-public class TADouble extends TAObject {
+public class TADouble extends TANumeric {
 
 	TAObject copyType()
 	{

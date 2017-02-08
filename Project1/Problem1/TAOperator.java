@@ -6,10 +6,7 @@ public class TAOperator extends TAObject {
 		return value.type();
 	}
 	
-	TAObject copyType()
-	{
-		return value.copyType();
-	}
+	
 
 	TAObject value;
 }

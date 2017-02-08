@@ -1,5 +1,5 @@
 
-public class TAInt extends TAObject {
+public class TAInt extends TANumeric {
 
 	
 	TAObject copyType()
@@ -13,10 +13,6 @@ public class TAInt extends TAObject {
 		return "int";
 	}
 
-	
-	/*void list() {
-		
-	}*/
 	
 	TAInt(int a)
 	{

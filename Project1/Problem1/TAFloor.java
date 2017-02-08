@@ -1,13 +1,8 @@
 
-public class TAFloor extends TAOperator{
+public class TAFloor extends TAInt{
 	
-	TAFloor (TAObject a) throws TAException
+	TAFloor (TANumeric a) 
 	{
-		if (a.type() == "bool")
-		{
-			System.err.println("Argument shouldn't be of type TABool");
-			throw new TAException();
-		}
 		
 		 op = a;
 		value = new TAInt();
@@ -15,4 +10,5 @@ public class TAFloor extends TAOperator{
 	}
 	
 	TAObject op;
+	TAInt value;
 }

@@ -1,7 +1,7 @@
 
-public class TAMultiply extends TAOperator {
+public class TAMultiply extends TANumeric {
 	
-	TAMultiply (TAObject a, TAObject b) throws TAException
+	TAMultiply (TANumeric a, TANumeric b) throws TAException
 	{
 		
 		if (a.type() != b.type())
@@ -11,17 +11,19 @@ public class TAMultiply extends TAOperator {
 			throw new TAException();
 			}
 		
-		if (a.type() == "bool")
-		{
-			System.err.println("Arguments should not be of type TABool");
-			throw new TAException();
-		}
 	
 			op1 = a;
 			op2 = b;
-			value = op1.copyType();
+			//value = op1.copyType();
 		
 				
 	}
+	
+	String type()
+	{
+		return value.type();
+	}
+	
 	TAObject op1,op2;
+	TANumeric value;
 }

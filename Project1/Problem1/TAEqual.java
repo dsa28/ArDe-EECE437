@@ -1,5 +1,5 @@
 
-public class TAEqual extends TAOperator {
+public class TAEqual extends TABool {
 	
 	
 	TAEqual(TAObject a, TAObject b) throws TAException
@@ -18,4 +18,5 @@ public class TAEqual extends TAOperator {
 	}
 	
 	TAObject op1, op2;
+	TABool value;
 }
