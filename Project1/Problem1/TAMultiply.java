@@ -19,6 +19,10 @@ public class TAMultiply extends TANumericFunction {
 				
 	}
 	
+	void evaluate()
+	{
+		
+	}
 	
 	
 	TANumeric op1,op2;

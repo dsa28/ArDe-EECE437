@@ -17,6 +17,10 @@ public class TADivide extends TANumericFunction {
 				
 	}
 	
+	void evaluate()
+	{
+		
+	}
 	
 	String type() {
 		

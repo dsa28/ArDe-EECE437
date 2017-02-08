@@ -23,6 +23,10 @@ public class TAPlus extends TANumericFunction {
 	}
 	
 
+	void evaluate()
+	{
+		
+	}
 	
 	TANumeric op1,op2;
 	TANumeric value;

@@ -18,7 +18,7 @@ public class TAGreaterThan extends TABoolFunction {
 		op2 = b;
 		
 		
-		value = new TABool();
+		//value = new TABool();
 		opvalue = ">";
 	}
 	
@@ -31,6 +31,6 @@ public class TAGreaterThan extends TABoolFunction {
 	}
 	
 	TAObject op1,op2;
-	TABool value;
+	//TABool value;
 
 }

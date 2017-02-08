@@ -8,7 +8,7 @@ public class TAOr extends TABoolFunction {
 		op1 = a;
 		op2 = b;
 		
-		value = new TABool();
+		//value = new TABool();
 		opvalue = "||";
 	}
 	
@@ -20,5 +20,5 @@ public class TAOr extends TABoolFunction {
 	}
 	
 	TABool op1, op2;
-	TABool value;
+	//TABool value;
 }

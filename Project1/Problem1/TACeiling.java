@@ -27,8 +27,12 @@ public class TACeiling extends TAInt{
 		value = new TAInt();
 		
 	}
+	void evaluate()
+	{
+		//value.set(ceiling(op.value));
+	}
 	
-	TAObject op;
+	TANumeric op;
 	TAInt value;
 	
 

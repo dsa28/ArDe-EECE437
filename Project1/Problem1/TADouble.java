@@ -25,7 +25,8 @@ public class TADouble extends TANumeric {
 		return "double";
 	}
 
-	
+	void evaluate()
+	{}
 	
 	
 	TADouble(double a)

@@ -14,8 +14,8 @@ public class TAEqual extends TABoolFunction {
 			op2 = b;
 		
 		
-		value = new TABool();
-		opvalue = "==";
+		//value = new TABool();
+		opvalue = "=";
 	}
 	
 	void listVal()
@@ -27,5 +27,5 @@ public class TAEqual extends TABoolFunction {
 	
 	
 	TAObject op1, op2;
-	TABool value;
+	//TABool value;
 }

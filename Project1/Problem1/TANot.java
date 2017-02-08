@@ -5,14 +5,14 @@ public class TANot extends TABoolFunction {
 	{
 		
 		op = a;
-		value = op.newInstance();
+		//value = op.newInstance();
 		opvalue = "not";
 	}
 	
 	void listVal()
-	{value.list();}
+	{op.list();}
 	
 	TABool op;
-	TABool value;
+	//TABool value;
 	
 }

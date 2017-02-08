@@ -10,8 +10,10 @@ public abstract class TABoolFunction extends TABool {
 			System.out.print(")");}
 	}
 	
+	
 	abstract void listVal();
 	
 	
 	String opvalue;
+	//TABool value;
 }

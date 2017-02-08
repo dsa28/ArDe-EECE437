@@ -20,6 +20,17 @@ public class TABool extends TAObject {
 	TABool newInstance()
 	{return new TABool();}
 	
+	void evaluate()
+	{
+		
+	}
+	
+	void pritnState()
+	{
+		System.out.println(value);
+	}
+	
+	
 	TABool(boolean a)
 	{
 		value = a;

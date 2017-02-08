@@ -14,6 +14,11 @@ public class TAInt extends TANumeric {
 			
 	}
 	
+	void evaluate()
+	{
+		
+	}
+	
 	
 	TANumeric newInstance()
 	{

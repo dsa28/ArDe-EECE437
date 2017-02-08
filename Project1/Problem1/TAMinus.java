@@ -34,6 +34,14 @@ public class TAMinus<T extends TANumeric> extends TANumericFunction {
 		return value.type();
 	}
 	
+	
+	void evaluate()
+	{
+		
+	}
+	
+	
 	TANumeric op1,op2;
 	TANumeric value;
+	
 }

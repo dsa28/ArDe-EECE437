@@ -14,8 +14,13 @@ public class TAAnd extends TABoolFunction {
 			op2 = b;
 		
 		
-		value = new TABool();
+		//value = new TABool();
 		opvalue = "&";
+	}
+	
+	void evaluate()
+	{
+		value= op1.value&&op2.value;
 	}
 	
 	void listVal()
@@ -25,6 +30,6 @@ public class TAAnd extends TABoolFunction {
 	
 	
 	TABool op1,op2;
-	TABool value;
+	//TABool value;
 
 }

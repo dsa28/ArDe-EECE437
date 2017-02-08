@@ -1,7 +1,7 @@
 
 public class TALessThan extends TABoolFunction {
 
-	TALessThan(TAObject a, TAObject b) throws TAException
+	TALessThan(TANumeric a, TANumeric b) throws TAException
 	{
 		if (a.type() != b.type())
 		{
@@ -19,7 +19,7 @@ public class TALessThan extends TABoolFunction {
 		op2 = b;
 		
 		
-		value = new TABool("newvalue");
+		//value = new TABool("newvalue");
 		opvalue = "<";
 	}
 	
@@ -30,7 +30,13 @@ public class TALessThan extends TABoolFunction {
 		op2.list();
 	}
 	
-	TAObject op1,op2;
-	TABool value;
+	void evaluate()
+	{
+		
+	}
+	
+	
+	TANumeric op1,op2;
+	//TABool value;
 
 }
