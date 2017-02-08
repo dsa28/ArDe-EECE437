@@ -10,6 +10,8 @@ public class main {
 		TALessThan t1 = new TALessThan(x,y);
 		TAAnd t2 = new TAAnd(b,t1);
 		
+		TAMinus t3 = new TAMinus(x);
+		t3 = new TAMinus(y,x);
 		//t1 = new TALessThan(x,d);
 	}
 

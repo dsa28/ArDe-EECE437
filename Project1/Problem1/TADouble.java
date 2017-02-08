@@ -1,10 +1,11 @@
 
 public class TADouble extends TANumeric {
 
-	TAObject copyType()
+	TANumeric newInstance()
 	{
 		return new TADouble();
 	}
+	
 
 	String type() {
 		

@@ -1,5 +1,5 @@
 
-public class TAMultiply extends TANumeric {
+public class TAMultiply extends TANumericFunction {
 	
 	TAMultiply (TANumeric a, TANumeric b) throws TAException
 	{
@@ -14,16 +14,13 @@ public class TAMultiply extends TANumeric {
 	
 			op1 = a;
 			op2 = b;
-			//value = op1.copyType();
+			value = op1.newInstance();
 		
 				
 	}
 	
-	String type()
-	{
-		return value.type();
-	}
 	
-	TAObject op1,op2;
-	TANumeric value;
+	
+	TANumeric op1,op2;
+	
 }

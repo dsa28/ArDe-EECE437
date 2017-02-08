@@ -1,5 +1,5 @@
 
-public class TADivide extends TANumeric {
+public class TADivide extends TANumericFunction {
 	
 	TADivide(TANumeric a, TANumeric b) throws TAException
 	{

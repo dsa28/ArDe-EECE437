@@ -2,10 +2,9 @@
 public class TAInt extends TANumeric {
 
 	
-	TAObject copyType()
+	TANumeric newInstance()
 	{
 		return new TAInt();
-		
 	}
 	
 	

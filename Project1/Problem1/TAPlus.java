@@ -1,5 +1,5 @@
 
-public class TAPlus extends TANumeric {
+public class TAPlus extends TANumericFunction {
 
 	TAPlus (TANumeric a, TANumeric b)
 	{
@@ -21,6 +21,8 @@ public class TAPlus extends TANumeric {
 	{
 		return value.type();
 	}
+	
+
 	
 	TANumeric op1,op2;
 	TANumeric value;

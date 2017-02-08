@@ -1,5 +1,5 @@
 
-public class TAMinus extends TANumeric {
+public class TAMinus<T extends TANumeric> extends TANumericFunction {
 
 	TAMinus(TANumeric a) 
 	{
@@ -11,19 +11,20 @@ public class TAMinus extends TANumeric {
 		
 	}
 	
-	TAMinus (TANumeric a, TANumeric b) throws TAException
+	public TAMinus (T a, T b) //throws TAException
 	{
-		if (a.type() != b.type())
+		
+		/*if (a.type() != b.type())
 	{
 	System.err.println("Both arguments should be of same type");
 	throw new TAException();
-	}
+	}*/
 
 
 	
 		op1 = a;
 		op2 = b;
-		//value = op1.copyType();
+		value = a.newInstance();
 		
 				
 	}
