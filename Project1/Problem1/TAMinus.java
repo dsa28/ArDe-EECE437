@@ -1,47 +1,32 @@
 
-public class TAMinus<T extends TANumeric> extends TANumericFunction {
+public class TAMinus extends TAInt{
 
-	TAMinus(TANumeric a) 
+	TAMinus(TAInt a) 
 	{
 		
-			//op1 = 0 and is of the type of op2
-			//op1 = op2.copyType();
+			op1 = new TAInt(); //op1 = 0
 			op2 = a;
-			//value = op2.copyType();
-		
-	}
-	
-	public TAMinus (T a, T b) //throws TAException
-	{
-		
-		/*if (a.type() != b.type())
-	{
-	System.err.println("Both arguments should be of same type");
-	throw new TAException();
-	}*/
-
-
-	
-		op1 = a;
-		op2 = b;
-		value = a.newInstance();
-		
 				
 	}
 	
-	String type()
+	TAMinus (TAInt a, TAInt b) //throws TAException
 	{
-		return value.type();
+		
+	
+		op1 = a;
+		op2 = b;
+		
+				
 	}
 	
 	
 	void evaluate()
 	{
-		
+		value = op1.value - op2.value;
 	}
 	
 	
-	TANumeric op1,op2;
-	TANumeric value;
+	TAInt op1,op2;
+	
 	
 }
