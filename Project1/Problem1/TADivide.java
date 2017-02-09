@@ -1,32 +1,20 @@
 
-public class TADivide extends TANumericFunction {
+public class TADivide extends TAInt {
 	
-	TADivide(TANumeric a, TANumeric b) throws TAException
+	TADivide(TAInt a, TAInt b) 
 	{
-		
-		if (a.type() != b.type())
-		{
-		System.err.println("Both arguments should be of same type");
-		throw new TAException();
-		}
-	
-	
 			op1 = a;
-			op2 = b;
-			//value = op1;
+			op2 = b;		
 				
 	}
 	
 	void evaluate()
 	{
-		
+		value = op1.value/op2.value;
 	}
 	
-	String type() {
-		
-		return value.type();
-	}
 	
-	TANumeric op1,op2;
-	TANumeric value;
+	
+	TAInt op1,op2;
+
 }

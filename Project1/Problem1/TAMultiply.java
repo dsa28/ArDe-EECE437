@@ -1,30 +1,19 @@
 
-public class TAMultiply extends TANumericFunction {
+public class TAMultiply extends TAInt {
 	
-	TAMultiply (TANumeric a, TANumeric b) throws TAException
+	TAMultiply (TAInt a, TAInt b)
 	{
-		
-		if (a.type() != b.type())
-	
-		{
-			System.err.println("Both arguments should be of same type");
-			throw new TAException();
-			}
-		
-	
 			op1 = a;
-			op2 = b;
-			value = op1.newInstance();
-		
+			op2 = b;		
 				
 	}
 	
 	void evaluate()
 	{
-		
+		value = op1.value*op2.value;
 	}
 	
 	
-	TANumeric op1,op2;
+	TAInt op1,op2;
 	
 }

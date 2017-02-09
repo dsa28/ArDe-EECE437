@@ -1,33 +1,19 @@
 
-public class TAPlus extends TANumericFunction {
+public class TAPlus extends TAInt {
 
-	TAPlus (TANumeric a, TANumeric b)
+	TAPlus (TAInt a, TAInt b)
 	{
-		if (a.type() != b.type())
-			{
-			System.err.println("Both arguments should be of same type");
-	
-			}
-		
-		
 			op1 = a;
-			op2 = b;
-			//value = op1.copyType();
-		
-				
+			op2 = b;			
 	}
 	
-	String type()
-	{
-		return value.type();
-	}
 	
 
 	void evaluate()
 	{
-		
+		value = op1.value + op2.value;
 	}
 	
-	TANumeric op1,op2;
-	TANumeric value;
+	TAInt op1,op2;
+	
 }

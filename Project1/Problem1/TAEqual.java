@@ -1,8 +1,13 @@
 
 public class TAEqual extends TABoolFunction {
 	
+	TAEqual(TABool a, TABool b)
+	{
+		op1 = a;
+		op2 = b;
+	}
 	
-	TAEqual(TAObject a, TAObject b) throws TAException
+	TAEqual(TANumeric a, TANumeric b) throws TAException
 	{
 		if (a.type() != b.type())
 		{
@@ -13,9 +18,7 @@ public class TAEqual extends TABoolFunction {
 			op1 = a;
 			op2 = b;
 		
-		
-		//value = new TABool();
-		opvalue = "=";
+			opvalue = "=";
 	}
 	
 	void listVal()
@@ -27,5 +30,5 @@ public class TAEqual extends TABoolFunction {
 	
 	
 	TAObject op1, op2;
-	//TABool value;
+	
 }
