@@ -16,6 +16,10 @@ public abstract class TANumericFunction extends TANumeric {
 	}
 	
 	
+	int evaluate(int a,int b)
+	{	return 0;}
+	double evaluate (double a, double b)
+	{return 0.0;}
 	
 	TANumeric newInstance() {
 		/*
