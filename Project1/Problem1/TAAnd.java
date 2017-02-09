@@ -14,7 +14,7 @@ public class TAAnd extends TABoolFunction {
 			op2 = b;
 		
 		
-		//value = new TABool();
+		
 		opvalue = "&";
 	}
 	
@@ -30,6 +30,6 @@ public class TAAnd extends TABoolFunction {
 	
 	
 	TABool op1,op2;
-	//TABool value;
+	
 
 }

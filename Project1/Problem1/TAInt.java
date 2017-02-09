@@ -1,6 +1,11 @@
 
-public class TAInt extends TANumeric {
+public class TAInt extends TANumeric implements Comparable<TAInt> {
 
+	public int compareTo(TAInt o) {
+		
+		return new Integer(value).compareTo(o.value);
+	}
+	
 	
 	void set (int i)
 	{value = i;	}
@@ -50,5 +55,8 @@ public class TAInt extends TANumeric {
 	}
 	
 	int value;
+
+	
+	
 
 }

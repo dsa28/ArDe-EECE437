@@ -1,6 +1,12 @@
 
-public class TADouble extends TANumeric {
+public class TADouble extends TANumeric implements Comparable<TADouble> {
 
+	public int compareTo(TADouble o) {
+		
+		return new Double(value).compareTo(o.value);
+	}
+	
+	
 	void list()
 	{
 		if (name!=null)
@@ -48,5 +54,9 @@ public class TADouble extends TANumeric {
 	
 	
 	double value;
+
+
+
+	
 	
 }

@@ -13,27 +13,21 @@ public class TACeiling extends TAInt{
 	}
 	
 	TACeiling (TANumeric a) 
-	{
-		
-		op = a;
-		value = new TAInt();
-		
-	}
+	{op = a;}
+	
+	
 	
 	TACeiling (TANumeric a, String s)
-	{
-		op = a;
-		name = s;
-		value = new TAInt();
-		
-	}
+	{op = a;
+	name = s;}
+	
 	void evaluate()
 	{
 		//value.set(ceiling(op.value));
 	}
 	
 	TANumeric op;
-	TAInt value;
+	int value;
 	
 
 }

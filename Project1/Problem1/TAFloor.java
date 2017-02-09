@@ -14,22 +14,17 @@ public class TAFloor extends TAInt{
 	
 	
 	TAFloor (TANumeric a) 
-	{
-		
-		 op = a;
-		value = new TAInt();
-		
-	}
+	{op = a;}
 	
 	TAFloor (TANumeric a, String s)
 	{
 		op = a;
 		name = s;
-		value = new TAInt();
+	
 	}
 	
 	
 	
 	TAObject op;
-	TAInt value;
+	int value;
 }

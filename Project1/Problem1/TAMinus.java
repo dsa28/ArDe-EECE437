@@ -11,11 +11,8 @@ public class TAMinus extends TAInt{
 	
 	TAMinus (TAInt a, TAInt b) //throws TAException
 	{
-		
-	
 		op1 = a;
 		op2 = b;
-		
 				
 	}
 	
@@ -27,6 +24,7 @@ public class TAMinus extends TAInt{
 	
 	
 	TAInt op1,op2;
+	
 	
 	
 }
