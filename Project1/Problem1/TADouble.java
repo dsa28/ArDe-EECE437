@@ -46,7 +46,7 @@ public class TADouble extends TANumeric implements Comparable<TADouble> {
 		name = s;
 	}
 	
-	private TADouble()
+	 TADouble()
 	{
 		value = 0.0;
 	}
