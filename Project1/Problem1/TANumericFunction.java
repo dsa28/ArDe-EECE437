@@ -22,10 +22,6 @@ public abstract class TANumericFunction extends TANumeric {
 	{return 0.0;}
 	
 	TANumeric newInstance() {
-		/*
-		 * Function newInstance is used to generate
-		 * a new instance of the type of the TANumeric
-		 */
 		
 		return value.newInstance();
 	}

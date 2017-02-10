@@ -1,9 +1,9 @@
 
-public class TAInt extends TANumeric implements Comparable<TAInt> {
+public class TAInt extends TANumeric implements TAIntValue {
 
-	public int compareTo(TAInt o) {
-		
-		return new Integer(value).compareTo(o.value);
+	public int value()
+	{
+		return value;
 	}
 	
 	

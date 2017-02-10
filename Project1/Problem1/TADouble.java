@@ -1,9 +1,9 @@
 
-public class TADouble extends TANumeric implements Comparable<TADouble> {
+public class TADouble extends TANumeric implements TADoubleValue {
 
-	public int compareTo(TADouble o) {
+	public double value() {
 		
-		return new Double(value).compareTo(o.value);
+		return value;
 	}
 	
 	
