@@ -50,8 +50,7 @@ public class TAPlus extends TANumericFunction {
 	 }
 	 
 	 
-	 
-	 
+
 	 //two arguments and a name
 	 <E extends TAIntValue> TAPlus(E a, E b, String s)
 	 {
@@ -64,7 +63,7 @@ public class TAPlus extends TANumericFunction {
 	}
 	 
 	 
-	 
+	
 	
 	private TAPlus operation;
 	

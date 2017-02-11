@@ -1,5 +1,5 @@
 
-public class TAInt extends TANumeric implements TAIntValue {
+public class TAInt extends TAObject implements TAIntValue {
 
 	public int value()
 	{

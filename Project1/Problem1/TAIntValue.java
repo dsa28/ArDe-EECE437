@@ -1,5 +1,5 @@
 
-public interface TAIntValue {
+public interface TAIntValue extends TAValue{
 
  /* default String type()
 	{

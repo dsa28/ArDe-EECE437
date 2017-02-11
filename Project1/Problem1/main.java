@@ -5,7 +5,7 @@ public class main {
 
 		TAInt x = new TAInt("x");
 		TADouble d = new TADouble("d");
-		TACeiling y = new TACeiling(d);
+		//TACeiling y = new TACeiling(d);
 		TABool b = new TABool("b");
 		//TALessThan t1 = new TALessThan(x,y);
 		TAAnd t2 = new TAAnd(b,b);
@@ -17,9 +17,9 @@ public class main {
 		
 		
 		
-		TAMinus t3 = new TAMinus(y,x);
-		//TAMinus t4 = new TAMinus(x,d);
-		//TAPlus t2 = new TAPlus(t4,x);
+		TAMinus t3 = new TAMinus(x,x);
+		TAMinus t4 = new TAMinus(d,d);
+		TAPlus t5 = new TAPlus(x,x);
 
 	   // t3.evaluate();
 	    //t3.printState();

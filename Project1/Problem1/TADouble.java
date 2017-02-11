@@ -1,5 +1,5 @@
 
-public class TADouble extends TANumeric implements TADoubleValue {
+public class TADouble extends TAObject implements TADoubleValue {
 
 	public double value() {
 		

@@ -1,5 +1,5 @@
 
-public interface TADoubleValue {
+public interface TADoubleValue extends TAValue{
 
 	double value();
 	

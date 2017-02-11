@@ -1,5 +1,5 @@
 
-public abstract class TANumericFunction extends TANumeric {
+public abstract class TANumericFunction extends TAObject {
 
 	/*
 	 * TANumericFuncion, used to avoid repeating code
