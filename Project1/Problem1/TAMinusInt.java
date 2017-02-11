@@ -1,6 +1,11 @@
 
 public class TAMinusInt<T extends TAIntValue> extends TAMinus implements TAIntValue {
 
+	void printState()
+	{
+		System.out.print(value);
+	}
+	
 	String type()
 	{
 		return "int";

@@ -2,6 +2,12 @@
 public class TAMinus extends TANumericFunction {
 
 
+	void printState()
+	{
+		operation.printState();
+	}
+	
+	
 	String type()
 	{
 		return operation.type();

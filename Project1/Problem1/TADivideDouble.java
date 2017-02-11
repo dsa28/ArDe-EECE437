@@ -1,5 +1,11 @@
 public class TADivideDouble<T extends TADoubleValue> extends TADivide implements TADoubleValue {
 
+	void printState()
+	{
+		System.out.print(value);
+	}
+	
+	
 	String type()
 	{
 		return "double";

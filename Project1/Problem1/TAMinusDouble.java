@@ -1,6 +1,11 @@
 
 public class TAMinusDouble<T extends TADoubleValue> extends TAMinus implements TADoubleValue {
 	
+
+	void printState()
+	{
+		System.out.print(value);
+	}
 	
 	String type()
 	{
@@ -43,6 +48,7 @@ public class TAMinusDouble<T extends TADoubleValue> extends TAMinus implements T
 		 
 		 void evaluate()
 		 {
+			
 			 if (!single)
 			 value = op1.value()-op2.value();
 			 else

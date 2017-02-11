@@ -1,8 +1,11 @@
 
 public class TAPlus extends TANumericFunction {
 
-
-
+	void printState()
+	{
+		operation.printState();
+	}
+	
 
 	String type()
 	{

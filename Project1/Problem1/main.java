@@ -15,7 +15,9 @@ public class main {
 		b.set(true);
 		
 		TAMinus t3 = new TAMinus(y,x);
-	    t3 = new TAMinus(d,d);
+	
+	    t3.evaluate();
+	    t3.printState();
 		//t1 = new TALessThan(x,d);
 	}
 

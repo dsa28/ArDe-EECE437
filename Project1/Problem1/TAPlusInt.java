@@ -1,5 +1,10 @@
 public class TAPlusInt<T extends TAIntValue> extends TAPlus implements TAIntValue {
 
+	void printState()
+	{
+		System.out.print(value);
+	}
+	
 	String type()
 	{
 		return "int";

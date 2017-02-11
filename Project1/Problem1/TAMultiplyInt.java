@@ -1,5 +1,11 @@
 public class TAMultiplyInt<T extends TAIntValue> extends TAMultiply implements TAIntValue {
 
+	void printState()
+	{
+		System.out.print(value);
+	}
+	
+	
 	String type()
 	{
 		return "int";

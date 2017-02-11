@@ -1,7 +1,10 @@
 
 public class TAMultiply extends TANumericFunction {
 	
-
+	void printState()
+	{
+		operation.printState();
+	}
 
 	String type()
 	{

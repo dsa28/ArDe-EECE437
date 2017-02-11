@@ -1,5 +1,10 @@
 public class TAPlusDouble<T extends TADoubleValue> extends TAPlus implements TADoubleValue {
 
+	void printState()
+	{
+		System.out.print(value);
+	}
+	
 	String type()
 	{
 		return "double";

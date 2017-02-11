@@ -1,5 +1,11 @@
 public class TADivideInt<T extends TAIntValue> extends TADivide implements TAIntValue {
 
+	void printState()
+	{
+		System.out.print(value);
+	}
+	
+	
 	String type()
 	{
 		return "int";

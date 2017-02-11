@@ -1,5 +1,11 @@
 public class TAMultiplyDouble<T extends TADoubleValue> extends TAMultiply implements TADoubleValue {
 
+	void printState()
+	{
+		System.out.print(value);
+	}
+	
+	
 	String type()
 	{
 		return "double";
