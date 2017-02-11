@@ -2,33 +2,37 @@
 public class TAMinus extends TANumericFunction {
 
 
-	
-	
-	/*TAMinus(a)
+	String type()
 	{
-		op1 = a;
-		opvalue = "-";
-		single = true;
-	}
-	
-	TAMinus (E a, String s)
-	{
-		op1 = a;
-		opvalue = "-";
-		single = true;
-		name = s;
+		return operation.type();
 		
 	}
-	*/
+	
+	
+	void evaluate()
+		 {
+			operation.evaluate();
+		 }
+		 
+	void operands()
+	{
+		operation.operands();
+	}
+	
+	
+	
+	
+
 	
 	protected TAMinus()
 	{
-		
+		opvalue = "-";
 	}
 	
 	
 	
 	
+	//One argument
 	<E extends TAIntValue> TAMinus(E a)
 	{
 		operation = new TAMinusInt(a);
@@ -42,6 +46,7 @@ public class TAMinus extends TANumericFunction {
 	
 	
 	
+	//One argument and a name
 	<E extends TAIntValue> TAMinus(E a, String s)
 	{
 		operation = new TAMinusInt(a,s);
@@ -55,6 +60,7 @@ public class TAMinus extends TANumericFunction {
 	
 	
 	
+	//two arguemnts
 	 <E extends TAIntValue> TAMinus(E a, E b)
 	{
 		operation = new TAMinusInt(a,b);
@@ -68,7 +74,7 @@ public class TAMinus extends TANumericFunction {
 	 
 	 
 	 
-	 
+	 //two arguments and a name
 	 <E extends TAIntValue> TAMinus (E a, E b, String s)
 	 {
 		 operation = new TAMinusInt(a,b,s);
@@ -82,16 +88,11 @@ public class TAMinus extends TANumericFunction {
 	 
 	 
 	 
-	 void evaluate()
-	 {
-		operation.evaluate();
-	 }
-	 
-	 
 	
 	boolean single;
-	TAMinus operation;
+	private TAMinus operation;
 	
+
 
 	
 	

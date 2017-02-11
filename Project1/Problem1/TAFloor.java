@@ -1,5 +1,9 @@
 
-public class TAFloor extends TAInt{
+public class TAFloor implements TAIntValue{
+	
+	public int value()
+	{return value;}
+	
 	
 	void list()
 	{
@@ -27,4 +31,5 @@ public class TAFloor extends TAInt{
 	
 	TAObject op;
 	int value;
+	String name;
 }

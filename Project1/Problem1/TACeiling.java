@@ -1,5 +1,16 @@
 
-public class TACeiling extends TAInt{
+public class TACeiling implements TAIntValue{
+	
+	String type()
+	{
+		return "int";
+	}
+	
+	public int value()
+	{
+		return value;
+	}
+	
 	
 	void list()
 	{
@@ -11,6 +22,8 @@ public class TACeiling extends TAInt{
 			System.out.print(")");
 			}
 	}
+	
+	
 	
 	TACeiling (TANumeric a) 
 	{op = a;}
@@ -28,6 +41,7 @@ public class TACeiling extends TAInt{
 	
 	TANumeric op;
 	int value;
+	String name;
 	
-
 }
+

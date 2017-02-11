@@ -2,6 +2,12 @@
 public class TAMinusDouble<T extends TADoubleValue> extends TAMinus implements TADoubleValue {
 	
 	
+	String type()
+	{
+		return "double";
+	}
+	
+	
 		public double value()
 		{
 			return value;
@@ -10,15 +16,12 @@ public class TAMinusDouble<T extends TADoubleValue> extends TAMinus implements T
 		TAMinusDouble(T a)
 		{
 			op1 = a;
-			opvalue = "-";
 			single = true;
 		}
 		
 		TAMinusDouble (T a, String s)
 		{
-			op1 = a;
-			opvalue = "-";
-			single = true;
+			this(a);
 			name = s;
 			
 		}
@@ -27,18 +30,14 @@ public class TAMinusDouble<T extends TADoubleValue> extends TAMinus implements T
 		{
 			op1 = a;
 			op2 = b;
-			opvalue = "-";
 			single = false;
 			
 		}
 		 
 		 TAMinusDouble(T a, T b, String s)
 		 {
-			 op1 = a;
-			 op2 = b;
-			 name = s;
-			 opvalue = "-";
-			 single = false;
+			 this(a,b);
+			 name =s;
 		 }
 		
 		 
@@ -52,7 +51,6 @@ public class TAMinusDouble<T extends TADoubleValue> extends TAMinus implements T
 		 
 		 
 		T op1, op2;
-		boolean single;
 		double value;
 		
 		

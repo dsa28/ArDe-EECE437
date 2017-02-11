@@ -1,19 +1,69 @@
 
-public class TAMultiply extends TAInt {
+public class TAMultiply extends TANumericFunction {
 	
-	TAMultiply (TAInt a, TAInt b)
+
+
+	String type()
 	{
-			op1 = a;
-			op2 = b;		
-				
+		return operation.type();
+		
 	}
+	
 	
 	void evaluate()
+		 {
+			operation.evaluate();
+		 }
+		 
+	void operands()
 	{
-		value = op1.value*op2.value;
+		operation.operands();
 	}
 	
 	
-	TAInt op1,op2;
+	
+	
+
+	
+	protected TAMultiply()
+	{
+		opvalue = "*";
+	}
+	
+	
+	
+	
+	
+	//two arguemnts
+	 <E extends TAIntValue> TAMultiply(E a, E b)
+	{
+		operation = new TAMultiplyInt(a,b);
+	}
+	 
+	 <E extends TADoubleValue> TAMultiply(E a, E b)
+	 {
+		 operation = new TAMultiplyDouble(a,b);
+	 }
+	 
+	 
+	 
+	 
+	 //two arguments and a name
+	 <E extends TAIntValue> TAMultiply(E a, E b, String s)
+	 {
+		 operation = new TAMultiplyInt(a,b,s);
+	}
+	
+	 <E extends TADoubleValue> TAMultiply(E a, E b, String s)
+	 {
+		 operation = new TAMultiplyDouble(a,b,s);
+	}
+	 
+	 
+	 
+	
+	private TAMultiply operation;
+	
+	
 	
 }

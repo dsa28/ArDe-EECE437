@@ -1,20 +1,71 @@
 
-public class TADivide extends TAInt {
-	
-	TADivide(TAInt a, TAInt b) 
+public class TADivide extends TANumericFunction{
+
+
+	String type()
 	{
-			op1 = a;
-			op2 = b;		
-				
+		return operation.type();
+		
 	}
+	
 	
 	void evaluate()
+		 {
+			operation.evaluate();
+		 }
+		 
+	void operands()
 	{
-		value = op1.value/op2.value;
+		operation.operands();
 	}
 	
 	
 	
-	TAInt op1,op2;
+	
 
+	
+	protected TADivide()
+	{
+		opvalue = "/";
+	}
+	
+	
+	
+	
+	
+	//two arguemnts
+	 <E extends TAIntValue> TADivide(E a, E b)
+	{
+		operation = new TADivideInt(a,b);
+	}
+	 
+	 <E extends TADoubleValue> TADivide(E a, E b)
+	 {
+		 operation = new TADivideDouble(a,b);
+	 }
+	 
+	 
+	 
+	 
+	 //two arguments and a name
+	 <E extends TAIntValue> TADivide(E a, E b, String s)
+	 {
+		 operation = new TADivideInt(a,b,s);
+	}
+	
+	 <E extends TADoubleValue> TADivide (E a, E b, String s)
+	 {
+		 operation = new TADivideDouble(a,b,s);
+	}
+	 
+	 
+	 
+	
+	private TADivide operation;
+	
+	
+	
+	
 }
+	
+

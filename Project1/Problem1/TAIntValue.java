@@ -1,7 +1,7 @@
 
 public interface TAIntValue {
 
- /*  default String type()
+ /* default String type()
 	{
 		return "int";
 	}*/

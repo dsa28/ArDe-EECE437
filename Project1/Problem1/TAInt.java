@@ -11,24 +11,13 @@ public class TAInt extends TANumeric implements TAIntValue {
 	{value = i;	}
 	
 	void list()
-	{
-		if (name!=null)
-			System.out.print(name);
-		else
-			System.out.print(value);
-			
-	}
+	{System.out.print(name);}
 	
 	void evaluate()
 	{
-		
+	
 	}
 	
-	
-	TANumeric newInstance()
-	{
-		return new TAInt();
-	}
 	
 	
 	String type() {
@@ -36,8 +25,9 @@ public class TAInt extends TANumeric implements TAIntValue {
 	}
 
 	
-	TAInt(int a)
+	TAInt(String s,int a)
 	{
+		name = s;
 		value = a;
 	}
 	
@@ -49,10 +39,7 @@ public class TAInt extends TANumeric implements TAIntValue {
 		name = s;
 	}
 	
-	TAInt()
-	{
-		value = 0;
-	}
+
 	
 	int value;
 

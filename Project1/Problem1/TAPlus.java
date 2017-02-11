@@ -1,19 +1,73 @@
 
-public class TAPlus extends TAInt {
+public class TAPlus extends TANumericFunction {
 
-	TAPlus (TAInt a, TAInt b)
+
+
+
+	String type()
 	{
-			op1 = a;
-			op2 = b;			
+		return operation.type();
+		
 	}
 	
 	
-
 	void evaluate()
+		 {
+			operation.evaluate();
+		 }
+		 
+	void operands()
 	{
-		value = op1.value + op2.value;
+		operation.operands();
 	}
 	
-	TAInt op1,op2;
+	
+	
+	
+
+	
+	protected TAPlus()
+	{
+		opvalue = "+";
+	}
+	
+	
+	
+	
+	
+	//two arguemnts
+	 <E extends TAIntValue> TAPlus(E a, E b)
+	{
+		operation = new TAPlusInt(a,b);
+	}
+	 
+	 <E extends TADoubleValue> TAPlus (E a, E b)
+	 {
+		 operation = new TAPlusDouble(a,b);
+	 }
+	 
+	 
+	 
+	 
+	 //two arguments and a name
+	 <E extends TAIntValue> TAPlus(E a, E b, String s)
+	 {
+		 operation = new TAPlusInt(a,b,s);
+	}
+	
+	 <E extends TADoubleValue> TAPlus (E a, E b, String s)
+	 {
+		 operation = new TAPlusDouble(a,b,s);
+	}
+	 
+	 
+	 
+	
+	private TAPlus operation;
+	
+
+
+	
 	
 }
+	
