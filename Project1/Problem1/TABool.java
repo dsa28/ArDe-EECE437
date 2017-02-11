@@ -2,13 +2,7 @@
 public class TABool extends TAObject {
 
 	void list()
-	{
-		if (name!=null)
-			System.out.print(name);
-		else
-			System.out.print(value);
-			
-	}
+	{System.out.print(name);	}
 	
 	void set(boolean bool)
 	{value=bool;}
@@ -17,13 +11,9 @@ public class TABool extends TAObject {
 		return "bool";
 	}
 	
-	TABool newInstance()
-	{return new TABool();}
 	
 	void evaluate()
-	{
-		
-	}
+	{}
 	
 	void pritnState()
 	{
@@ -31,8 +21,9 @@ public class TABool extends TAObject {
 	}
 	
 	
-	TABool(boolean a)
+	TABool(String s,boolean a)
 	{
+		name = s;
 		value = a;
 	}
 	
@@ -42,10 +33,7 @@ public class TABool extends TAObject {
 		name = s;
 	}
 	
-	 TABool()
-	{
-		value = false;
-	}
+	
 	
 	
 	 boolean value;

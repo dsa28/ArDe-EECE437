@@ -13,9 +13,11 @@ public class main {
 		x.set(5);
 		d.set(2.3);
 		b.set(true);
+		TAPlusInt t5 = new TAPlusInt (x,y);
 		
-		TAMinus t3 = new TAMinus(y,x);
-	
+		TAMinus t3 = new TAMinusInt(y,t5);
+		
+
 	    t3.evaluate();
 	    t3.printState();
 		//t1 = new TALessThan(x,d);

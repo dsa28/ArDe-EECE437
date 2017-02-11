@@ -9,7 +9,6 @@ public class TAAnd extends TABoolFunction {
 	
 	TAAnd(TABool a, TABool b) 
 	{
-		
 			op1 = a;
 			op2 = b;
 		

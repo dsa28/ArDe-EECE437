@@ -1,5 +1,10 @@
 public abstract class TABoolFunction extends TABool {
 
+	TABoolFunction(String s) {
+		super(s);
+	}
+
+
 	void list()
 	{
 		if (name!=null)
