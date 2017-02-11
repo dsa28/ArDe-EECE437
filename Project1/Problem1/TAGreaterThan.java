@@ -1,18 +1,13 @@
-public class TAGreaterThan extends TABoolFunction {
-
-	TAGreaterThan(TAObject a, TAObject b) throws TAException
-	{
-		if (a.type() != b.type())
-		{
-		System.err.println("Both arguments should be of same type");
-		throw new TAException();
-		}
+public class TAGreaterThan extends TABoolFunction implements TABoolValue {
+	public boolean value()
 	
-	if (a.type() == "bool")
 	{
-		System.err.println("Arguments should not be of type TABool");
-		throw new TAException();
+		return value;
 	}
+	
+	TAGreaterThan(TANumeric a, TANumeric b) 
+	{
+		
 	
 		op1 = a;
 		op2 = b;
@@ -32,5 +27,11 @@ public class TAGreaterThan extends TABoolFunction {
 	
 	TAObject op1,op2;
 	//TABool value;
+
+	@Override
+	void evaluate() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

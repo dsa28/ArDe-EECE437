@@ -1,13 +1,18 @@
 
-public class TAAnd extends TABoolFunction {
+public class TAAnd<T extends TABoolValue> extends TABoolFunction implements TABoolValue {
 
-	/*
+ /*
 	 * The AND operator is a binary operator 
 	 * which takes as input two boolean values
 	 * and outputs a boolean value
 	 */
 	
-	TAAnd(TABool a, TABool b) 
+	public boolean value()
+	{
+		return value;
+	}
+	
+	TAAnd(T a, T b) 
 	{
 			op1 = a;
 			op2 = b;
@@ -19,16 +24,19 @@ public class TAAnd extends TABoolFunction {
 	
 	void evaluate()
 	{
-		value= op1.value&&op2.value;
+		value= op1.value() && op2.value();
 	}
 	
 	void listVal()
-	{op1.list();
+	{//op1.list();
 	System.out.print(" ");
-	op2.list();}
+	//op2.list();
+	}
 	
 	
-	TABool op1,op2;
-	
+	T op1,op2;
+
+
+		
 
 }

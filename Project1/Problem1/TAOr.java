@@ -1,7 +1,12 @@
 
-public class TAOr extends TABoolFunction {
+public class TAOr<T extends TABoolValue> extends TABoolFunction implements TABoolValue {
 
-	TAOr(TABool a, TABool b) 
+	public boolean value()
+	{
+		return value;
+	}
+	
+	TAOr(T a, T b) 
 	{
 		
 			
@@ -13,11 +18,17 @@ public class TAOr extends TABoolFunction {
 	
 	void listVal()
 	{
-		op1.list();
+		//op1.list();
 		System.out.print(" ");
-		op2.list();
+		//op2.list();
 	}
 	
-	TABool op1, op2;
+	T op1, op2;
+
+	@Override
+	void evaluate() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

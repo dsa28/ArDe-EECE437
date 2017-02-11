@@ -8,18 +8,21 @@ public class main {
 		TACeiling y = new TACeiling(d);
 		TABool b = new TABool("b");
 		//TALessThan t1 = new TALessThan(x,y);
-		//TAAnd t2 = new TAAnd(b,t1);
+		TAAnd t2 = new TAAnd(b,b);
 		//t2.list();
 		x.set(5);
 		d.set(2.3);
 		b.set(true);
-		TAPlusInt t5 = new TAPlusInt (x,y);
 		
-		TAMinus t3 = new TAMinusInt(y,t5);
 		
+		
+		
+		TAMinus t3 = new TAMinus(y,x);
+		//TAMinus t4 = new TAMinus(x,d);
+		//TAPlus t2 = new TAPlus(t4,x);
 
-	    t3.evaluate();
-	    t3.printState();
+	   // t3.evaluate();
+	    //t3.printState();
 		//t1 = new TALessThan(x,d);
 	}
 

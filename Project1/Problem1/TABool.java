@@ -1,6 +1,12 @@
 
-public class TABool extends TAObject {
+public class TABool extends TAObject implements TABoolValue{
 
+	public boolean value()
+	{
+		return value;
+	}
+	
+	
 	void list()
 	{System.out.print(name);	}
 	

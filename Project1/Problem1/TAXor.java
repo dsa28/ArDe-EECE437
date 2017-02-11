@@ -1,8 +1,12 @@
 
-public class TAXor extends TABoolFunction {
+public class TAXor<T extends TABoolValue> extends TABoolFunction implements TABoolValue {
 	
+	public boolean value()
+	{
+		return value;
+	}
 	
-	TAXor(TABool a, TABool b) 
+	TAXor(T a, T b) 
 	{
 		
 			op1 = a;
@@ -14,12 +18,19 @@ public class TAXor extends TABoolFunction {
 	
 	void listVal()
 	{
-		op1.list();
+		//op1.list();
 		System.out.print(" ");
-		op2.list();
+		//op2.list();
 	}
 	
 	
-	TABool op1, op2;
+	T op1, op2;
+
+
+	@Override
+	void evaluate() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

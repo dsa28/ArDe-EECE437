@@ -1,13 +1,25 @@
 
-public class TANot extends TABoolFunction {
+public class TANot<T extends TABoolValue> extends TABoolFunction implements TABoolValue {
 	
-	TANot(TABool a)
+	
+	public boolean value()
+	{
+		return value;
+	}
+	
+	TANot(T a)
 	{op = a;
 	opvalue = "not";}
 	
-	void listVal()
-	{op.list();}
+	void listVal(){}
+	//{op.list();}
 	
-	TABool op;
+	T op;
+
+	@Override
+	void evaluate() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

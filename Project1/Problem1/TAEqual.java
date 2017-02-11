@@ -1,5 +1,10 @@
 
-public class TAEqual extends TABoolFunction {
+public class TAEqual extends TABoolFunction implements TABoolValue {
+	
+	public boolean value()
+	{
+		return value;
+	}
 	
 	TAEqual(TABool a, TABool b)
 	{
@@ -7,13 +12,9 @@ public class TAEqual extends TABoolFunction {
 		op2 = b;
 	}
 	
-	TAEqual(TANumeric a, TANumeric b) throws TAException
+	TAEqual(TANumeric a, TANumeric b) 
 	{
-		if (a.type() != b.type())
-		{
-			System.err.println("Both arguments should be of the same type");
-			throw new TAException();
-		}
+		
 		
 			op1 = a;
 			op2 = b;
@@ -30,5 +31,12 @@ public class TAEqual extends TABoolFunction {
 	
 	
 	TAObject op1, op2;
+
+
+	@Override
+	void evaluate() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }
