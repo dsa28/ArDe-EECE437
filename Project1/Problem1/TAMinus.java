@@ -1,7 +1,12 @@
 
 public class TAMinus extends TANumericFunction {
 
-
+	public void list()
+	{
+		operation.list();
+	}
+	
+	
 	void printState()
 	{
 		operation.printState();
@@ -15,10 +20,8 @@ public class TAMinus extends TANumericFunction {
 	}
 	
 	
-	void evaluate()
-		 {
-			operation.evaluate();
-		 }
+	public void evaluate()
+	 {operation.evaluate();}
 		 
 	void operands()
 	{

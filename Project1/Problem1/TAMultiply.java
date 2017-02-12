@@ -1,6 +1,12 @@
 
 public class TAMultiply extends TANumericFunction {
 	
+	void list()
+	{
+		operation.list();
+	}
+	
+	
 	void printState()
 	{
 		operation.printState();
@@ -13,15 +19,11 @@ public class TAMultiply extends TANumericFunction {
 	}
 	
 	
-	void evaluate()
-		 {
-			operation.evaluate();
-		 }
+	public void evaluate()
+    {operation.evaluate();}
 		 
 	void operands()
-	{
-		operation.operands();
-	}
+	{operation.operands();}
 	
 	
 	
@@ -66,6 +68,10 @@ public class TAMultiply extends TANumericFunction {
 	 
 	
 	private TAMultiply operation;
+
+
+
+
 	
 	
 	

@@ -1,14 +1,20 @@
 
 public class TADouble extends TAObject implements TADoubleValue {
-
+	
+	
+	
+	
 	public double value() {
 		
 		return value;
 	}
 	
 	
-	void list()
+	public void list()
 	{System.out.print(name);}
+	
+	public void evaluate()
+	{}
 	
 	
 	void set(double d)
@@ -21,8 +27,7 @@ public class TADouble extends TAObject implements TADoubleValue {
 		return "double";
 	}
 
-	void evaluate()
-	{}
+	
 	
 	
 	TADouble(String s,double a)

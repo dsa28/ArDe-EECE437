@@ -1,6 +1,39 @@
 
 public class TAMinusInt<T extends TAIntValue> extends TAMinus implements TAIntValue {
 
+	
+	public void evaluate()
+	 {
+		op1.evaluate();
+		 if (!single)
+		 {op2.evaluate();
+		 value = op1.value()-op2.value();}
+		 else
+		 value = -op1.value();
+	 }
+	 
+	
+	public void list()
+	{
+		if (name!= null)
+			System.out.println(name);
+		else
+		{
+			System.out.print("(- ");
+			op1.list();
+			if (!single)
+			{
+				System.out.print(" ");
+				op2.list();
+				System.out.print(")");
+			}
+			
+			
+		}
+		
+	}
+	
+	
 	void printState()
 	{
 		System.out.print(value);
@@ -11,27 +44,11 @@ public class TAMinusInt<T extends TAIntValue> extends TAMinus implements TAIntVa
 		return "int";
 	}
 	
-	 void evaluate()
-	 {
-		 if (!single)
-		 value = op1.value()-op2.value();
-		 else
-		value = -op1.value();
-	 }
+	
 	 
 	public int value()
-	{
-		return value;
-	}
+	{return value;}
 	
-	
-	void operands()
-	{
-		
-		System.out.println(op1.value());
-		if (!single)
-			System.out.println(" " + op2.value());
-	}
 	
 	
 	

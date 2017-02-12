@@ -10,13 +10,11 @@ public class TAInt extends TAObject implements TAIntValue {
 	void set (int i)
 	{value = i;	}
 	
-	void list()
+	public void list()
 	{System.out.print(name);}
 	
-	void evaluate()
-	{
-	
-	}
+	public void evaluate()
+	{}
 	
 	
 	

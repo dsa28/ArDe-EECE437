@@ -1,6 +1,10 @@
 
 public class TADivide extends TANumericFunction{
 
+	public void list()
+	{operation.list();}
+	
+	
 	void printState()
 	{
 		operation.printState();
@@ -13,15 +17,8 @@ public class TADivide extends TANumericFunction{
 	}
 	
 	
-	void evaluate()
-		 {
-			operation.evaluate();
-		 }
-		 
-	void operands()
-	{
-		operation.operands();
-	}
+	public void evaluate()
+		 {operation.evaluate();}
 	
 	
 	

@@ -1,5 +1,29 @@
 public class TAPlusInt<T extends TAIntValue> extends TAPlus implements TAIntValue {
 
+	public void evaluate()
+	 {
+		op1.evaluate();
+		op2.evaluate();
+		value = op1.value()+op2.value();
+	 }
+	
+	
+	public void list()
+	{
+		if (name!= null)
+			System.out.println(name);
+		else
+		{
+			System.out.print("(+ ");
+			op1.list();
+			System.out.print(" ");
+			op2.list();
+			System.out.print(")");
+			}
+				
+	}
+	
+	
 	void printState()
 	{
 		System.out.print(value);
@@ -10,10 +34,7 @@ public class TAPlusInt<T extends TAIntValue> extends TAPlus implements TAIntValu
 		return "int";
 	}
 	
-	 void evaluate()
-	 {
-		 value = op1.value()+op2.value();	
-	 }
+	
 	 
 	public int value()
 	{

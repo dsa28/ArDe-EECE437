@@ -5,7 +5,7 @@ public class main {
 
 		TAInt x = new TAInt("x");
 		TADouble d = new TADouble("d");
-		//TACeiling y = new TACeiling(d);
+		TACeiling y = new TACeiling(d);
 		TABool b = new TABool("b");
 		//TALessThan t1 = new TALessThan(x,y);
 		TAAnd t2 = new TAAnd(b,b);

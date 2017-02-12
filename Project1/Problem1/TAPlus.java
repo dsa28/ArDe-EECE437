@@ -1,10 +1,16 @@
 
 public class TAPlus extends TANumericFunction {
 
+	
+	public void evaluate()
+	{operation.evaluate();}
+	 
+	public void list()
+	{operation.list();}
+	
+	
 	void printState()
-	{
-		operation.printState();
-	}
+	{operation.printState();}
 	
 
 	String type()
@@ -14,10 +20,6 @@ public class TAPlus extends TANumericFunction {
 	}
 	
 	
-	void evaluate()
-		 {
-			operation.evaluate();
-		 }
 		 
 	void operands()
 	{
