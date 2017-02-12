@@ -1,32 +1,72 @@
 
-public class TADivide extends TANumericFunction {
+public class TADivide extends TANumericFunction{
+
+	public void list()
+	{operation.list();}
 	
-	TADivide(TANumeric a, TANumeric b) throws TAException
+	
+	void printState()
 	{
-		
-		if (a.type() != b.type())
-		{
-		System.err.println("Both arguments should be of same type");
-		throw new TAException();
-		}
-	
-	
-			op1 = a;
-			op2 = b;
-			//value = op1;
-				
+		operation.printState();
 	}
 	
-	void evaluate()
+	String type()
 	{
+		return operation.type();
 		
 	}
 	
-	String type() {
-		
-		return value.type();
+	
+	public void evaluate()
+		 {operation.evaluate();}
+	
+	
+	
+	
+
+	
+	protected TADivide()
+	{
+		opvalue = "/";
 	}
 	
-	TANumeric op1,op2;
-	TANumeric value;
+	
+	
+	
+	
+	//two arguemnts
+	 <E extends TAIntValue> TADivide(E a, E b)
+	{
+		operation = new TADivideInt(a,b);
+	}
+	 
+	 <E extends TADoubleValue> TADivide(E a, E b)
+	 {
+		 operation = new TADivideDouble(a,b);
+	 }
+	 
+	 
+	 
+	 
+	 //two arguments and a name
+	 <E extends TAIntValue> TADivide(E a, E b, String s)
+	 {
+		 operation = new TADivideInt(a,b,s);
+	}
+	
+	 <E extends TADoubleValue> TADivide (E a, E b, String s)
+	 {
+		 operation = new TADivideDouble(a,b,s);
+	}
+	 
+	 
+	 
+	
+	private TADivide operation;
+	
+	
+	
+	
 }
+	
+

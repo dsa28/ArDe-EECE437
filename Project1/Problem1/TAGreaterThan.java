@@ -1,36 +1,51 @@
-public class TAGreaterThan extends TABoolFunction {
 
-	TAGreaterThan(TAObject a, TAObject b) throws TAException
-	{
-		if (a.type() != b.type())
-		{
-		System.err.println("Both arguments should be of same type");
-		throw new TAException();
-		}
+public class TAGreaterThan implements TABoolValue{
 	
-	if (a.type() == "bool")
+	String type()
 	{
-		System.err.println("Arguments should not be of type TABool");
-		throw new TAException();
+		return "bool";
 	}
 	
-		op1 = a;
-		op2 = b;
-		
-		
-		//value = new TABool();
-		opvalue = ">";
-	}
-	
-	
-	void listVal()
+	public boolean value()
 	{
-		op1.list();
-		System.out.print(" ");
-		op2.list();
+		return operation.value();
 	}
 	
-	TAObject op1,op2;
-	//TABool value;
+	public void evaluate()
+	{operation.evaluate();}
+	
+	public void list()
+	{
+		operation.list();
+	}
+	
+	
+	protected TAGreaterThan()
+	{}
+	
+	
+	
+	
+	<E extends TAIntValue> TAGreaterThan (E a, E b) 
+	{operation = new TAGreaterThanInt(a,b);}
+	<E extends TADoubleValue> TAGreaterThan (E a, E b)
+	{operation = new TAGreaterThanDouble(a,b);}
+	
+	
+	
+	
+	<E extends TAIntValue> TAGreaterThan (E a, E b, String s)
+	{operation = new TAGreaterThanInt(a,b,s);}
+	<E extends TADoubleValue> TAGreaterThan (E a, E b, String s)
+	{operation = new TAGreaterThanDouble(a,b,s);}
+	
+	
+	
+	
 
+	
+	
+	TAGreaterThan operation;
+	String name;
+	
 }

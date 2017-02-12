@@ -1,33 +1,52 @@
 
-public class TACeiling extends TAInt{
+public class TACeiling implements TAIntValue{
 	
-	void list()
+	String type()
 	{
-		if (name != null)
-			System.out.print(name);
-		else
-			{System.out.print("(ceiling" + " " );
-			op.list();
-			System.out.print(")");
-			}
+		return "int";
 	}
 	
-	TACeiling (TANumeric a) 
-	{op = a;}
-	
-	
-	
-	TACeiling (TANumeric a, String s)
-	{op = a;
-	name = s;}
-	
-	void evaluate()
+	public int value()
 	{
-		//value.set(ceiling(op.value));
+		return operation.value();
 	}
 	
-	TANumeric op;
-	int value;
+	public void evaluate()
+	{operation.evaluate();}
+	
+	public void list()
+	{
+		operation.list();
+	}
+	
+	
+	protected TACeiling()
+	{}
+	
+	
+	
+	
+	<E extends TAIntValue> TACeiling (E a) 
+	{operation = new TACeilingInt(a);}
+	<E extends TADoubleValue> TACeiling (E a)
+	{operation = new TACeilingDouble(a);}
+	
+	
+	
+	
+	<E extends TAIntValue> TACeiling (E a, String s)
+	{operation = new TACeilingInt(a,s);}
+	<E extends TADoubleValue> TACeiling (E a, String s)
+	{operation = new TACeilingDouble(a,s);}
+	
+	
+	
 	
 
+	
+	
+	TACeiling operation;
+	String name;
+	
 }
+

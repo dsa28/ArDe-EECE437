@@ -1,19 +1,28 @@
-public abstract class TABoolFunction extends TABool {
+public abstract class TABoolFunction extends TAObject  {
 
-	void list()
+	
+String type()
+{
+	return "bool";
+}
+	
+void list()
 	{
 		if (name!=null)
 			System.out.print(name);
 		else
 			{System.out.print("(" + opvalue + " " );
-			listVal();
+			//listVal();
 			System.out.print(")");}
 	}
 	
 	
-	abstract void listVal();
+	//abstract void listVal();
+	
+	
 	
 	
 	String opvalue;
+	boolean value;
 	//TABool value;
 }

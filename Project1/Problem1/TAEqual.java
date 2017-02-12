@@ -1,31 +1,54 @@
 
-public class TAEqual extends TABoolFunction {
+public class TAEqual implements TABoolValue{
 	
-	
-	TAEqual(TAObject a, TAObject b) throws TAException
+	String type()
 	{
-		if (a.type() != b.type())
-		{
-			System.err.println("Both arguments should be of the same type");
-			throw new TAException();
-		}
-		
-			op1 = a;
-			op2 = b;
-		
-		
-		//value = new TABool();
-		opvalue = "=";
+		return "bool";
 	}
 	
-	void listVal()
+	public boolean value()
 	{
-		op1.list();
-		System.out.print(" ");
-		op2.list();
+		return operation.value();
+	}
+	
+	public void evaluate()
+	{operation.evaluate();}
+	
+	public void list()
+	{
+		operation.list();
 	}
 	
 	
-	TAObject op1, op2;
-	//TABool value;
+	protected TAEqual()
+	{}
+	
+	
+	
+	
+	<E extends TAIntValue> TAEqual (E a, E b) 
+	{operation = new TAEqualInt(a,b);}
+	<E extends TADoubleValue> TAEqual (E a, E b)
+	{operation = new TAEqualDouble(a,b);}
+	<E extends TABoolValue> TAEqual(E a, E b)
+	{operation = new TAEqualBool(a,b);}
+	
+	
+	
+	<E extends TAIntValue> TAEqual (E a, E b, String s)
+	{operation = new TAEqualInt(a,b,s);}
+	<E extends TADoubleValue> TAEqual (E a, E b, String s)
+	{operation = new TAEqualDouble(a,b,s);}
+	<E extends TABoolValue> TAEqual (E a, E b, String s)
+	{operation = new TAEqualBool(a,b,s);}
+	
+	
+	
+	
+
+	
+	
+	TAEqual operation;
+	String name;
+	
 }

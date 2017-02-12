@@ -1,34 +1,21 @@
 
-public class TAInt extends TANumeric implements Comparable<TAInt> {
+public class TAInt extends TAObject implements TAIntValue {
 
-	public int compareTo(TAInt o) {
-		
-		return new Integer(value).compareTo(o.value);
+	public int value()
+	{
+		return value;
 	}
 	
 	
 	void set (int i)
 	{value = i;	}
 	
-	void list()
-	{
-		if (name!=null)
-			System.out.print(name);
-		else
-			System.out.print(value);
-			
-	}
+	public void list()
+	{System.out.print(name);}
 	
-	void evaluate()
-	{
-		
-	}
+	public void evaluate()
+	{}
 	
-	
-	TANumeric newInstance()
-	{
-		return new TAInt();
-	}
 	
 	
 	String type() {
@@ -36,8 +23,9 @@ public class TAInt extends TANumeric implements Comparable<TAInt> {
 	}
 
 	
-	TAInt(int a)
+	TAInt(String s,int a)
 	{
+		name = s;
 		value = a;
 	}
 	
@@ -49,10 +37,7 @@ public class TAInt extends TANumeric implements Comparable<TAInt> {
 		name = s;
 	}
 	
-	TAInt()
-	{
-		value = 0;
-	}
+
 	
 	int value;
 

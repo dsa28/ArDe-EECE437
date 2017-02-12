@@ -1,29 +1,25 @@
 
-public class TADouble extends TANumeric implements Comparable<TADouble> {
-
-	public int compareTo(TADouble o) {
+public class TADouble extends TAObject implements TADoubleValue {
+	
+	
+	
+	
+	public double value() {
 		
-		return new Double(value).compareTo(o.value);
+		return value;
 	}
 	
 	
-	void list()
-	{
-		if (name!=null)
-			System.out.print(name);
-		else
-			System.out.print(value);
-			
-	}
+	public void list()
+	{System.out.print(name);}
+	
+	public void evaluate()
+	{}
+	
 	
 	void set(double d)
 	{value = d;}
 	
-	
-	TANumeric newInstance()
-	{
-		return new TADouble();
-	}
 	
 
 	String type() {
@@ -31,12 +27,12 @@ public class TADouble extends TANumeric implements Comparable<TADouble> {
 		return "double";
 	}
 
-	void evaluate()
-	{}
 	
 	
-	TADouble(double a)
+	
+	TADouble(String s,double a)
 	{
+		name = s;
 		value = a;
 	}
 	
@@ -44,11 +40,6 @@ public class TADouble extends TANumeric implements Comparable<TADouble> {
 	{
 		value = 0.0;
 		name = s;
-	}
-	
-	private TADouble()
-	{
-		value = 0.0;
 	}
 	
 	

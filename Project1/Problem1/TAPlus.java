@@ -1,33 +1,77 @@
 
 public class TAPlus extends TANumericFunction {
 
-	TAPlus (TANumeric a, TANumeric b)
-	{
-		if (a.type() != b.type())
-			{
-			System.err.println("Both arguments should be of same type");
 	
-			}
-		
-		
-			op1 = a;
-			op2 = b;
-			//value = op1.copyType();
-		
-				
-	}
+	public void evaluate()
+	{operation.evaluate();}
+	 
+	public void list()
+	{operation.list();}
 	
-	String type()
-	{
-		return value.type();
-	}
+	
+	void printState()
+	{operation.printState();}
 	
 
-	void evaluate()
+	String type()
 	{
+		return operation.type();
 		
 	}
 	
-	TANumeric op1,op2;
-	TANumeric value;
+	
+		 
+	void operands()
+	{
+		operation.operands();
+	}
+	
+	
+	
+	
+
+	
+	protected TAPlus()
+	{
+		opvalue = "+";
+	}
+	
+	
+	
+	
+	
+	//two arguemnts
+	 <E extends TAIntValue> TAPlus(E a, E b)
+	{
+		operation = new TAPlusInt(a,b);
+	}
+	 
+	 <E extends TADoubleValue> TAPlus (E a, E b)
+	 {
+		 operation = new TAPlusDouble(a,b);
+	 }
+	 
+	 
+
+	 //two arguments and a name
+	 <E extends TAIntValue> TAPlus(E a, E b, String s)
+	 {
+		 operation = new TAPlusInt(a,b,s);
+	}
+	
+	 <E extends TADoubleValue> TAPlus (E a, E b, String s)
+	 {
+		 operation = new TAPlusDouble(a,b,s);
+	}
+	 
+	 
+	
+	
+	private TAPlus operation;
+	
+
+
+	
+	
 }
+	

@@ -1,30 +1,78 @@
 
 public class TAMultiply extends TANumericFunction {
 	
-	TAMultiply (TANumeric a, TANumeric b) throws TAException
+	void list()
 	{
-		
-		if (a.type() != b.type())
-	
-		{
-			System.err.println("Both arguments should be of same type");
-			throw new TAException();
-			}
-		
-	
-			op1 = a;
-			op2 = b;
-			value = op1.newInstance();
-		
-				
+		operation.list();
 	}
 	
-	void evaluate()
+	
+	void printState()
 	{
+		operation.printState();
+	}
+
+	String type()
+	{
+		return operation.type();
 		
 	}
 	
 	
-	TANumeric op1,op2;
+	public void evaluate()
+    {operation.evaluate();}
+		 
+	void operands()
+	{operation.operands();}
+	
+	
+	
+	
+
+	
+	protected TAMultiply()
+	{
+		opvalue = "*";
+	}
+	
+	
+	
+	
+	
+	//two arguemnts
+	 <E extends TAIntValue> TAMultiply(E a, E b)
+	{
+		operation = new TAMultiplyInt(a,b);
+	}
+	 
+	 <E extends TADoubleValue> TAMultiply(E a, E b)
+	 {
+		 operation = new TAMultiplyDouble(a,b);
+	 }
+	 
+	 
+	 
+	 
+	 //two arguments and a name
+	 <E extends TAIntValue> TAMultiply(E a, E b, String s)
+	 {
+		 operation = new TAMultiplyInt(a,b,s);
+	}
+	
+	 <E extends TADoubleValue> TAMultiply(E a, E b, String s)
+	 {
+		 operation = new TAMultiplyDouble(a,b,s);
+	}
+	 
+	 
+	 
+	
+	private TAMultiply operation;
+
+
+
+
+	
+	
 	
 }

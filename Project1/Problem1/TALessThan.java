@@ -1,42 +1,52 @@
 
-public class TALessThan extends TABoolFunction {
+public class TALessThan implements TABoolValue{
+	
+	String type()
+	{
+		return "bool";
+	}
+	
+	public boolean value()
+	{
+		return operation.value();
+	}
+	
+	public void evaluate()
+	{operation.evaluate();}
+	
+	public void list()
+	{
+		operation.list();
+	}
+	
+	
+	protected TALessThan()
+	{}
+	
+	
+	void printState()
+	{System.out.println(operation.value());}
+	
+	<E extends TAIntValue> TALessThan (E a, E b) 
+	{operation = new TALessThanInt(a,b);}
+	<E extends TADoubleValue> TALessThan (E a, E b)
+	{operation = new TALessThanDouble(a,b);}
+	
+	
+	
+	
+	<E extends TAIntValue> TALessThan (E a, E b, String s)
+	{operation = new TALessThanInt(a,b,s);}
+	<E extends TADoubleValue> TALessThan (E a, E b, String s)
+	{operation = new TALessThanDouble(a,b,s);}
+	
+	
+	
+	
 
-	TALessThan(TANumeric a, TANumeric b) throws TAException
-	{
-		if (a.type() != b.type())
-		{
-		System.err.println("Both arguments should be of same type");
-		throw new TAException();
-		}
-	
-	if (a.type() == "bool")
-	{
-		System.err.println("Arguments should not be of type TABool");
-		throw new TAException();
-	}
-	
-		op1 = a;
-		op2 = b;
-		
-		
-		//value = new TABool("newvalue");
-		opvalue = "<";
-	}
-	
-	void listVal()
-	{
-		op1.list();
-		System.out.print(" ");
-		op2.list();
-	}
-	
-	void evaluate()
-	{
-		
-	}
 	
 	
-	TANumeric op1,op2;
-	//TABool value;
-
+	TALessThan operation;
+	String name;
+	
 }
