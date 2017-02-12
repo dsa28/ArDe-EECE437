@@ -1,37 +1,51 @@
-public class TAGreaterThan extends TABoolFunction implements TABoolValue {
+
+public class TAGreaterThan implements TABoolValue{
+	
+	String type()
+	{
+		return "bool";
+	}
+	
 	public boolean value()
-	
 	{
-		return value;
+		return operation.value();
 	}
 	
-	TAGreaterThan(TANumeric a, TANumeric b) 
-	{
-		
+	public void evaluate()
+	{operation.evaluate();}
 	
-		op1 = a;
-		op2 = b;
-		
-		
-		//value = new TABool();
-		opvalue = ">";
+	public void list()
+	{
+		operation.list();
 	}
 	
 	
-	void listVal()
-	{
-		op1.list();
-		System.out.print(" ");
-		op2.list();
-	}
+	protected TAGreaterThan()
+	{}
 	
-	TAObject op1,op2;
-	//TABool value;
+	
+	
+	
+	<E extends TAIntValue> TAGreaterThan (E a, E b) 
+	{operation = new TAGreaterThanInt(a,b);}
+	<E extends TADoubleValue> TAGreaterThan (E a, E b)
+	{operation = new TAGreaterThanDouble(a,b);}
+	
+	
+	
+	
+	<E extends TAIntValue> TAGreaterThan (E a, E b, String s)
+	{operation = new TAGreaterThanInt(a,b,s);}
+	<E extends TADoubleValue> TAGreaterThan (E a, E b, String s)
+	{operation = new TAGreaterThanDouble(a,b,s);}
+	
+	
+	
+	
 
-	@Override
-	void evaluate() {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
+	
+	TAGreaterThan operation;
+	String name;
+	
 }

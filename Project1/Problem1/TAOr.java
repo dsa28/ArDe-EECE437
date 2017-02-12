@@ -1,6 +1,15 @@
 
 public class TAOr<T extends TABoolValue> extends TABoolFunction implements TABoolValue {
 
+	
+	public void evaluate() {
+		op1.evaluate();
+		op2.evaluate();
+		value = op1.value()||op2.value();
+		
+	}
+	
+	
 	public boolean value()
 	{
 		return value;
@@ -16,19 +25,26 @@ public class TAOr<T extends TABoolValue> extends TABoolFunction implements TABoo
 		opvalue = "||";
 	}
 	
-	void listVal()
+	
+	public void list()
 	{
-		//op1.list();
-		System.out.print(" ");
-		//op2.list();
+		if (name!= null)
+			System.out.println(name);
+		else
+		{
+			System.out.print("(or ");
+			op1.list();
+			System.out.print(" ");
+			op2.list();
+			System.out.print(")");
+			}
+				
 	}
+	
 	
 	T op1, op2;
 
-	@Override
-	void evaluate() {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
 
 }

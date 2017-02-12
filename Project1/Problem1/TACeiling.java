@@ -16,13 +16,7 @@ public class TACeiling implements TAIntValue{
 	
 	public void list()
 	{
-		if (name != null)
-			System.out.print(name);
-		else
-			{System.out.print("(ceiling" + " " );
-			operation.list();
-			System.out.print(")");
-			}
+		operation.list();
 	}
 	
 	

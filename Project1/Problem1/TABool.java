@@ -7,7 +7,7 @@ public class TABool extends TAObject implements TABoolValue{
 	}
 	
 	
-	void list()
+	public void list()
 	{System.out.print(name);	}
 	
 	void set(boolean bool)
@@ -18,7 +18,7 @@ public class TABool extends TAObject implements TABoolValue{
 	}
 	
 	
-	void evaluate()
+	public void evaluate()
 	{}
 	
 	void pritnState()

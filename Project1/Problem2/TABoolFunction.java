@@ -12,12 +12,12 @@ void list()
 			System.out.print(name);
 		else
 			{System.out.print("(" + opvalue + " " );
-			listVal();
+			//listVal();
 			System.out.print(")");}
 	}
 	
 	
-	abstract void listVal();
+	//abstract void listVal();
 	
 	
 	

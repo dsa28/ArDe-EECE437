@@ -7,6 +7,13 @@ public class TAAnd<T extends TABoolValue> extends TABoolFunction implements TABo
 	 * and outputs a boolean value
 	 */
 	
+	public void evaluate()
+	{
+		op1.evaluate();
+		op2.evaluate();
+		value= op1.value() && op2.value();
+	}
+	
 	public boolean value()
 	{
 		return value;
@@ -22,19 +29,28 @@ public class TAAnd<T extends TABoolValue> extends TABoolFunction implements TABo
 		opvalue = "&";
 	}
 	
-	void evaluate()
-	{
-		value= op1.value() && op2.value();
-	}
 	
-	void listVal()
-	{//op1.list();
-	System.out.print(" ");
-	//op2.list();
+	
+	public void list()
+	{
+		if (name!= null)
+			System.out.println(name);
+		else
+		{
+			System.out.print("(& ");
+			op1.list();
+			System.out.print(" ");
+			op2.list();
+			System.out.print(")");
+			}
+				
 	}
 	
 	
 	T op1,op2;
+
+
+	
 
 
 		

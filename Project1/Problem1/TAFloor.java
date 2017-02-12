@@ -1,35 +1,50 @@
 
 public class TAFloor implements TAIntValue{
 	
+	String type()
+	{
+		return "int";
+	}
+	
 	public int value()
-	{return value;}
-	
-	
-	void list()
 	{
-		if (name != null)
-			System.out.print(name);
-		else
-			{System.out.print("(floor" + " " );
-			op.list();
-			System.out.print(")");
-			}
+		return operation.value();
 	}
 	
+	public void evaluate()
+	{operation.evaluate();}
 	
-	TAFloor (TANumeric a) 
-	{op = a;}
-	
-	TAFloor (TANumeric a, String s)
-	{
-		op = a;
-		name = s;
-	
-	}
+	public void list()
+	{operation.list();}
 	
 	
+	protected TAFloor()
+	{}
 	
-	TAObject op;
-	int value;
+	
+	
+	
+	<E extends TAIntValue> TAFloor (E a) 
+	{operation = new TAFloorInt(a);}
+	<E extends TADoubleValue> TAFloor (E a)
+	{operation = new TAFloorDouble(a);}
+	
+	
+	
+	
+	<E extends TAIntValue> TAFloor (E a, String s)
+	{operation = new TAFloorInt(a,s);}
+	<E extends TADoubleValue> TAFloor (E a, String s)
+	{operation = new TAFloorDouble(a,s);}
+	
+	
+	
+	
+
+	
+	
+	TAFloor operation;
 	String name;
+	
 }
+

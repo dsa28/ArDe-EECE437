@@ -1,25 +1,35 @@
 
 public class TANot<T extends TABoolValue> extends TABoolFunction implements TABoolValue {
 	
+	public void evaluate() {
+		op.evaluate();
+		value = !(op.value());
+		
+	}
 	
 	public boolean value()
-	{
-		return value;
-	}
+	{return value;}
 	
 	TANot(T a)
 	{op = a;
 	opvalue = "not";}
 	
-	void listVal(){}
-	//{op.list();}
+	public void list()
+	{
+		if (name!= null)
+			System.out.println(name);
+		else
+		{
+			System.out.print("(not ");
+			op.list();
+			System.out.print(")");
+			}
+				
+	}
 	
 	T op;
 
-	@Override
-	void evaluate() {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
 	
 }

@@ -1,42 +1,54 @@
 
-public class TAEqual extends TABoolFunction implements TABoolValue {
+public class TAEqual implements TABoolValue{
+	
+	String type()
+	{
+		return "bool";
+	}
 	
 	public boolean value()
 	{
-		return value;
+		return operation.value();
 	}
 	
-	TAEqual(TABool a, TABool b)
+	public void evaluate()
+	{operation.evaluate();}
+	
+	public void list()
 	{
-		op1 = a;
-		op2 = b;
-	}
-	
-	TAEqual(TANumeric a, TANumeric b) 
-	{
-		
-		
-			op1 = a;
-			op2 = b;
-		
-			opvalue = "=";
-	}
-	
-	void listVal()
-	{
-		op1.list();
-		System.out.print(" ");
-		op2.list();
+		operation.list();
 	}
 	
 	
-	TAObject op1, op2;
+	protected TAEqual()
+	{}
+	
+	
+	
+	
+	<E extends TAIntValue> TAEqual (E a, E b) 
+	{operation = new TAEqualInt(a,b);}
+	<E extends TADoubleValue> TAEqual (E a, E b)
+	{operation = new TAEqualDouble(a,b);}
+	<E extends TABoolValue> TAEqual(E a, E b)
+	{operation = new TAEqualBool(a,b);}
+	
+	
+	
+	<E extends TAIntValue> TAEqual (E a, E b, String s)
+	{operation = new TAEqualInt(a,b,s);}
+	<E extends TADoubleValue> TAEqual (E a, E b, String s)
+	{operation = new TAEqualDouble(a,b,s);}
+	<E extends TABoolValue> TAEqual (E a, E b, String s)
+	{operation = new TAEqualBool(a,b,s);}
+	
+	
+	
+	
 
-
-	@Override
-	void evaluate() {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
+	TAEqual operation;
+	String name;
 	
 }

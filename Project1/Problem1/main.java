@@ -7,15 +7,20 @@ public class main {
 		TADouble d = new TADouble("d");
 		TACeiling y = new TACeiling(d);
 		TABool b = new TABool("b");
-		//TALessThan t1 = new TALessThan(x,y);
-		TAAnd t2 = new TAAnd(b,b);
-		//t2.list();
+		TALessThan t1 = new TALessThan(x,y);
+		TAAnd t2 = new TAAnd(b,t1);
+		t2.list();
+		
 		x.set(5);
 		d.set(2.3);
 		b.set(true);
 		
-		
-		
+		t1.evaluate();
+		System.out.println();
+		t1.printState();
+		d.set(5.3);
+		t1.evaluate();
+		t1.printState();
 		
 		TAMinus t3 = new TAMinus(x,x);
 		TAMinus t4 = new TAMinus(d,d);

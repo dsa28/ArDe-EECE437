@@ -1,9 +1,6 @@
-public interface TABoolValue {
+public interface TABoolValue extends TAValue {
 
- /* default String type()
-	{
-		return "int";
-	}*/
+
 	
 	boolean value();
 

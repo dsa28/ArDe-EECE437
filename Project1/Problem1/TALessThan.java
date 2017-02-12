@@ -1,32 +1,52 @@
 
-public class TALessThan extends TABoolFunction {
-
-	TALessThan(TANumeric a, TANumeric b) throws TAException
+public class TALessThan implements TABoolValue{
+	
+	String type()
 	{
-		
-
-		op1 = a;
-		op2 = b;
-		
-		
-		//value = new TABool("newvalue");
-		opvalue = "<";
+		return "bool";
 	}
 	
-	void listVal()
+	public boolean value()
 	{
-		op1.list();
-		System.out.print(" ");
-		op2.list();
+		return operation.value();
 	}
 	
-	void evaluate()
+	public void evaluate()
+	{operation.evaluate();}
+	
+	public void list()
 	{
-		
+		operation.list();
 	}
 	
 	
-	TANumeric op1,op2;
-	//TABool value;
+	protected TALessThan()
+	{}
+	
+	
+	void printState()
+	{System.out.println(operation.value());}
+	
+	<E extends TAIntValue> TALessThan (E a, E b) 
+	{operation = new TALessThanInt(a,b);}
+	<E extends TADoubleValue> TALessThan (E a, E b)
+	{operation = new TALessThanDouble(a,b);}
+	
+	
+	
+	
+	<E extends TAIntValue> TALessThan (E a, E b, String s)
+	{operation = new TALessThanInt(a,b,s);}
+	<E extends TADoubleValue> TALessThan (E a, E b, String s)
+	{operation = new TALessThanDouble(a,b,s);}
+	
+	
+	
+	
 
+	
+	
+	TALessThan operation;
+	String name;
+	
 }
