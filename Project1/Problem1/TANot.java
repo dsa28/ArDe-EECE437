@@ -1,5 +1,9 @@
 
-public class TANot<T extends TABoolValue> extends TABoolFunction implements TABoolValue {
+public class TANot<T extends TABoolValue> extends TAObject implements TABoolValue {
+	
+	String type()
+	{return "bool";}
+	
 	
 	public void evaluate() {
 		op.evaluate();
@@ -11,8 +15,7 @@ public class TANot<T extends TABoolValue> extends TABoolFunction implements TABo
 	{return value;}
 	
 	TANot(T a)
-	{op = a;
-	opvalue = "not";}
+	{op = a;}
 	
 	public void list()
 	{
@@ -28,6 +31,7 @@ public class TANot<T extends TABoolValue> extends TABoolFunction implements TABo
 	}
 	
 	T op;
+	boolean value;
 
 	
 	

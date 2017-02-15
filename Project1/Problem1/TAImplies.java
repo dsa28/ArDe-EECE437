@@ -1,32 +1,48 @@
 
-public class TAImplies extends TABoolFunction{
+public class TAImplies<T extends TABoolValue> extends TAObject implements TABoolValue{
 	
-	void evaluate()
+	public boolean value()
 	{
-		if (op1.value && !op2.value)
+		return value;
+	}
+	
+	String type()
+	{
+		return "bool";
+	}
+	
+	public void list()
+	{
+		System.out.print("(");
+		op1.list();
+		System.out.print(" ");
+		op2.list();
+		System.out.print(")");
+	}
+	
+	
+	public void evaluate()
+	{
+		if (op1.value() && !op2.value())
 			value = false;
 		else
 			value = true;
 	}
 	
 	
-	TAImplies(TABool a, TABool b) 
+	TAImplies(T a, T b) 
 	{
 		
 			op1 = a;
 			op2 = b;
 		
 		//value = new TABool();
-		opvalue = "implies";
+		
 	}
 	
-	void listVal()
-	{
-		op1.list();
-		System.out.print(" ");
-		op2.list();
-	}
 	
-	TABool op1, op2;
-	//TABool value;
+	T op1, op2;
+	boolean value;
+	
+	
 }

@@ -1,6 +1,9 @@
 
-public class TAOr<T extends TABoolValue> extends TABoolFunction implements TABoolValue {
+public class TAOr<T extends TABoolValue> extends TAObject implements TABoolValue {
 
+	String type()
+	{return "bool";
+	}
 	
 	public void evaluate() {
 		op1.evaluate();
@@ -22,7 +25,6 @@ public class TAOr<T extends TABoolValue> extends TABoolFunction implements TABoo
 		op1 = a;
 		op2 = b;
 		
-		opvalue = "||";
 	}
 	
 	
@@ -43,6 +45,7 @@ public class TAOr<T extends TABoolValue> extends TABoolFunction implements TABoo
 	
 	
 	T op1, op2;
+	boolean value;
 
 	
 	

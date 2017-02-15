@@ -1,11 +1,13 @@
 
-public class TAAnd<T extends TABoolValue> extends TABoolFunction implements TABoolValue {
+public class TAAnd<T extends TABoolValue> extends TAObject implements TABoolValue {
 
  /*
 	 * The AND operator is a binary operator 
 	 * which takes as input two boolean values
 	 * and outputs a boolean value
 	 */
+	public String type()
+	{return "boolean";}
 	
 	public void evaluate()
 	{
@@ -26,7 +28,7 @@ public class TAAnd<T extends TABoolValue> extends TABoolFunction implements TABo
 		
 		
 		
-		opvalue = "&";
+		
 	}
 	
 	
@@ -48,6 +50,7 @@ public class TAAnd<T extends TABoolValue> extends TABoolFunction implements TABo
 	
 	
 	T op1,op2;
+	boolean value;
 
 
 	

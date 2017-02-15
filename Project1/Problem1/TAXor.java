@@ -1,6 +1,8 @@
 
-public class TAXor<T extends TABoolValue> extends TABoolFunction implements TABoolValue {
+public class TAXor<T extends TABoolValue> extends TAObject implements TABoolValue {
 	
+	String type()
+	{return "bool";}
 	
 	public void evaluate() {
 		op1.evaluate();
@@ -18,7 +20,7 @@ public class TAXor<T extends TABoolValue> extends TABoolFunction implements TABo
 			op1 = a;
 			op2 = b;
 			
-			opvalue = "xor";
+			
 	}
 	
 	
@@ -39,6 +41,7 @@ public class TAXor<T extends TABoolValue> extends TABoolFunction implements TABo
 	
 	
 	T op1, op2;
+	boolean value;
 
 
 	
