@@ -26,6 +26,12 @@ class TAPair extends TAObject implements TAValue
 		next = o2;
 	}
 	
+	TAPair(TAObject o1, TAObject o2,String s)
+	{
+		this(o1,o2);
+		name = s;
+	}
+	
 	TAObject first;
 	TAObject next;
 }
