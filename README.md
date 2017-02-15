@@ -20,9 +20,10 @@ TAValue, TAIntValue and TADoubleValue- interfaces to restrict operations to one 
 main- as the name suggests, the class main is used to test the statements.
 
 
+
 In the Problem2 folder:
 
-Because problem 2 only involved adding properties to the already existing classes, this folder only contains a class main2 to test the architecture.
+Because problem 2 only involved adding properties to the already existing classes, this folder only contains a class main2 to test these properties.
 
 
 
@@ -30,3 +31,9 @@ Because problem 2 only involved adding properties to the already existing classe
 In the Problem3 folder:
 
 TAPair- This class allows the instanciation of pairs of objects.
+
+TAConstant- Contains a constant integer value. (May be modified to contain a double or boolean value if required).
+
+TAArray- Class to instanciate array objects
+
+TAArrayAccess- operator to access array elements
