@@ -15,6 +15,8 @@ TAAnd, TAOr, TAXor, TANot, TAImplies, TALessThan, TAGreaterThan, TALessThan, TAE
 
 TAPlusInt, TAPlusDouble, TAMinusInt, TAMinusDouble, TADivideInt, TADivideDouble, TAMultiplyInt, TAMultiplyDouble, TACeilingInt, TAFloorInt, TACeilingDouble, TAFloorDouble, TALessThanInt, TALessThanDouble, TAGreaterThanInt, TAGreaterThanDouble, TAEqualInt, TAEqualDouble, TAEqualBool- Some operations on datatypes are overloaded (act on different datatype), which means that for the abstraction to work, different versions of the operator should be created, hence the necessity for these classes.
 
+TAValue, TAIntValue and TADoubleValue- interfaces to restrict operations to one primitive type.
+
 main- as the name suggests, the class main is used to test the statements.
 
 
