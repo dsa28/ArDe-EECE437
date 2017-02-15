@@ -11,6 +11,8 @@ public class main {
 		TAAnd t2 = new TAAnd(b,t1);
 		t2.list();
 		
+		TAPair p = new TAPair(x,d);
+		
 		x.set(5);
 		d.set(2.3);
 		b.set(true);
