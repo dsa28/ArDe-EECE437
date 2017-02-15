@@ -24,7 +24,7 @@ class TAArray extends TAObject implements TAValue
 		
 	}
 	
-	<T extends TAInt>TAArray (String a, int type, T size)
+	<T extends TAIntValue>TAArray (String a, int type, T size)
 	{
 		this(a,type,size.value());
 	}
@@ -37,7 +37,7 @@ class TAArray extends TAObject implements TAValue
 		
 	}
 	
-	<T extends TAInt>TAArray (String a,double type, T size)
+	<T extends TAIntValue>TAArray (String a,double type, T size)
 	{
 		this(a,type,size.value());
 	}
@@ -50,7 +50,7 @@ class TAArray extends TAObject implements TAValue
 		
 	}
 	
-	<T extends TAInt>TAArray (String a, boolean type, T size)
+	<T extends TAIntValue>TAArray (String a, boolean type, T size)
 	{
 		this(a,type,size.value());
 	}

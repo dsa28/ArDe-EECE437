@@ -11,6 +11,7 @@ public class main3 {
 		TAPair p = new TAPair(x,d);
 		
 		
+		TAArray a = new TAArray("a", x.value(), N);
 		
 		
 		
