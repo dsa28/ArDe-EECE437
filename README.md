@@ -37,3 +37,6 @@ TAConstant- Contains a constant integer value. (May be modified to contain a dou
 TAArray- Class to instanciate array objects
 
 TAArrayAccess- operator to access array elements
+
+TAArrayInt,TAArrayDouble and TAArrayBool - to keep consistency with the operators, and to allow arrays of many types, I tried making specialized subclasses of the class TAArray and using the actual TAArray class as a "wrapper" class
+
