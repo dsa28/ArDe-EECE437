@@ -1,15 +1,32 @@
-import java.util.ArrayList;
+
 
 class TAArray extends TAObject implements TAValue
 {
 
+	int size()
+	{
+		return arr.size();
+	}
+	
+	
+	void set(int a)
+	{
+		arr.set(a);
+	}
+	
+	<T extends TAIntValue>void set(TAIntValue a)
+	{
+		arr.set(a);
+	}
+	
+	
 	String type() {
 		return "array";
 	}
 
 	
 	public void list() {
-		//print all elements
+		arr.list();
 	}
 
 	public void evaluate() {
@@ -19,7 +36,7 @@ class TAArray extends TAObject implements TAValue
 	TAArray(String a, int type, int size)
 	{
 		name = a;
-		this.size = size;
+		//this.size = size;
 		//arr = new TAArrayInt(size); 
 		
 	}
@@ -32,7 +49,7 @@ class TAArray extends TAObject implements TAValue
 	TAArray(String a, double type, int size)
 	{
 		name = a;
-		this.size = size;
+		//this.size = size;
 		//arr = new TAArrayInt(size); 
 		
 	}
@@ -45,8 +62,8 @@ class TAArray extends TAObject implements TAValue
 	TAArray(String a, boolean type, int size)
 	{
 		name = a;
-		this.size = size;
-		//arr = new TAArrayInt(size); 
+		//this.size = size;
+		arr = new TAArrayInt(size); 
 		
 	}
 	
@@ -55,10 +72,14 @@ class TAArray extends TAObject implements TAValue
 		this(a,type,size.value());
 	}
 	
+	protected TAArray()
+	{
+		
+	}
 	
 	
 	
-	int size;
+	//int size;
 	TAArray arr;
 	
 }

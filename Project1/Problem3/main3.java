@@ -12,7 +12,10 @@ public class main3 {
 		
 		
 		TAArray a = new TAArray("a", x.value(), N);
-		
+		TAInt i = new TAInt("i");
+		TAPlus exp = new TAPlus(i,one);
+		TAPair p2= new TAPair(i,x);
+		i.set(1);
 		
 		
 	
